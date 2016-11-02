@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro de Aluno</title>
+    <link href=" bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    
+    <div class="container">
+	<div class="jumbotron" align="center">
+    	<img  width="800px" height="85px" src="imagens/cadastroAluno.png"/>
+	</div>
+	<input type="image" align="right" width="80px" height="40px" src="imagens/logout.png" alt="submit">
+	</input>
+	<div class="menu-container">	
+	<ul class="menu clearfix" >
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Novo Aluno</a></li>
+	<li><a href="#">Remover Aluno</a></li>
+	<li><a href="#">Alterar Aluno</a></li>
+	<li><a href="#">Consultar Aluno</a></li>
+	</ul>
+	</div>
+    	<form action="cadastroAluno.php" method="post" name="form" id="form">
+
+			</br>
+			<img  width="100px" height="45px" src="imagens/dados.png"/>
+			<hr>
+   
+			<div class="form-group col-md-3">
+				<label for="matricula">Matricula</label>
+				<input class="form-control" name="matricula" id="matricula"  type="text" size="20" maxlength="10" /> 
+			</div>
+			<div class="form-group col-md-6">
+				<label for="nome">Nome</label>
+				<input class="form-control"  name="nome" id="nome"  type="text" size="100" maxlength="150"/>
+  			</div>
+            	
+
+			<div class="form-group col-md-3">
+				<label for="Sexo">Sexo</label>
+                    <select class="form-control" name="sexo" id="sexo">
+			<option>Selecione o sexo</option>
+                        <option value="M" >Masculino</option>
+                        <option value="F" >Feminino</option>
+                    </select/>
+			</div>
+			
+			<div class="form-group col-md-3">
+				<label for="dataNascimento">Data de Nascimento</label>
+				<input class="form-control" name="dataNascimento" id="dataNascimento"  type="date" size="20" maxlength="10"/> 
+			</div>
+            
+
+			<div class="form-group col-md-6">
+				<label for="cidade">Cidade</label>  <br>
+                <input class="form-control" name="cidade" id="cidade" type="text" size="40" maxlength="60"/>
+		    </div>
+
+
+			<div class="form-group col-md-3">
+				<label for="uf">Estado</label> 
+                <select class="form-control" name="uf" id= "uf"lang="pt">
+                    <option value="">Selecione o Estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AM">Amazonas</option>
+            <option value="AP">Amapá</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RO">Rondônia</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SE">Sergipe</option>
+            <option value="SP">São Paulo</option>
+            <option value="TO">Tocantins</option>
+                </select>
+	     	</div>
+			</br>
+		
+           	</div>
+			<div align=center>
+			<button type="submit" name="Enviar" value = "Enviar" class="btn btn-primary">Gravar</button>
+			<button type="submit" name="Cancelar" value = "Cancelar" class="btn btn-danger">Cancelar</button>
+			</div>
+
+		</form>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  
+  </body>
+</html>
