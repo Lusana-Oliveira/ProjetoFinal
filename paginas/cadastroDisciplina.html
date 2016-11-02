@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro de 	Disciplina</title>
+    <link href=" bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    
+    <div class="container">
+	<div class="jumbotron" align="center">
+    	<img  width="800px" height="85px" src="imagens/cadastroDisciplina.png"/>
+	</div>
+	<input type="image" align="right" width="80px" height="40px" src="imagens/logout.png" alt="submit">
+	</input>
+	<div class="menu-container">	
+	<ul class="menu clearfix" >
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Nova Disciplina</a></li>
+	<li><a href="#">Remover Disciplina</a></li>
+	<li><a href="#">Alterar Disciplina</a></li>
+	<li><a href="#">Consultar Disciplina</a></li>
+	</ul>
+	</div>
+    	<form action="cadastroDisciplina.php" method="post" name="Formulario" id="Formulario">
+			</br>
+			<img  width="100px" height="45px" src="imagens/dados.png"/>
+			<hr>
+   
+			<div class="form-group col-md-3">
+				<label for="codigo">Codigo</label>
+				<input class="form-control" name="codigo" id="codigo"  type="text" size="20" maxlength="10"/> 
+			</div>
+
+			<div class="form-group col-md-6">
+				<label for="nome">Nome</label>
+				<input class="form-control"  name="nome" id="nome"  type="text" size="20" maxlength="10"/>
+  			</div>
+            
+			<div class="form-group col-md-3">
+				<label for="carga">Carga Horária</label>
+				<input class="form-control"  name="carga" id="carga"  type="text" size="20" maxlength="10"/>
+  			</div>
+
+			<div align=center>
+			<button type="submit" name="Enviar" value = "Enviar" class="btn btn-primary">Gravar</button>
+			<button type="submit" name="Cancelar" value = "Cancelar" class="btn btn-danger">Cancelar</button>
+			</div>
+
+
+		</form>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  
+  </body>
+</html>
