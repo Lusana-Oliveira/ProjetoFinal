@@ -11,7 +11,7 @@ if ($con){
 $matricula = $_POST ['matricula'];
 $nome = $_POST ['nome'];
 $sexo = $_POST ['sexo'];
-$dataNascimento = $_POST ['dataNascimento'];
+$dtnasc = $_POST ['dtnasc'];
 $cidade = $_POST ['cidade'];
 $uf = $_POST ['uf'];
 
@@ -23,7 +23,7 @@ if($linhas > 0 ){
 pg_close($con);
 
 }elseif ($linhas==0) {
-$sql = "INSERT INTO aluno (matricula, nome, sexo, dtnasc, cidade, uf) VALUES ('$matricula','$nome', '$sexo','$dataNascimento','$cidade', '$uf');";
+$sql = "INSERT INTO aluno (matricula, nome, sexo, dtnasc, cidade, uf) VALUES ('$matricula','$nome', '$sexo','$dtnasc','$cidade', '$uf');";
 $res = pg_query($con, $sql);
 $qtd_linhas = pg_affected_rows($res);
 

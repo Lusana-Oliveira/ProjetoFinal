@@ -13,7 +13,7 @@
     
     <div class="container">
 	<div class="jumbotron" align="center">
-    	<img  width="800px" height="85px" src="imagens/cadastroDisciplina.png"/>
+    	<img  width="400px" height="100px" src="imagens/siistema.png"/>
 	</div>
 	<input type="image" align="right" width="80px" height="40px" src="imagens/logout.png" alt="submit">
 	</input>
@@ -21,34 +21,32 @@
 	<ul class="menu clearfix" >
 	<li><a href="#">Home</a></li>
 	<li><a href="#">Nova Disciplina</a></li>
-	<li><a href="#">Remover Disciplina</a></li>
-	<li><a href="#">Alterar Disciplina</a></li>
-	<li><a href="#">Consultar Disciplina</a></li>
+	<li><a href="listagemDisciplina.php">Alterações da Disciplina</a></li>
 	</ul>
 	</div>
     	<form action="cadastroDisciplina.php" method="post" name="Formulario" id="Formulario">
 			</br>
-			<img  width="100px" height="45px" src="imagens/dados.png"/>
+			<h2>Dados da Disciplina</h2>
 			<hr>
    
 			<div class="form-group col-md-3">
 				<label for="codigo">Codigo</label>
-				<input class="form-control" name="codigo" id="codigo"  type="text" size="20" maxlength="10"/> 
+				<input class="form-control" name="codigo" id="codigo"  type="text" size="20" /> 
 			</div>
 
 			<div class="form-group col-md-6">
 				<label for="nome">Nome</label>
-				<input class="form-control"  name="nome" id="nome"  type="text" size="20" maxlength="10"/>
+				<input class="form-control"  name="nome" id="nome"  type="text" size="20" />
   			</div>
             
 			<div class="form-group col-md-3">
 				<label for="carga">Carga Horária</label>
-				<input class="form-control"  name="carga" id="carga"  type="text" size="20" maxlength="10"/>
+				<input class="form-control"  name="carga" id="carga"  type="text" size="20"/>
   			</div>
 
 			<div align=center>
 			<button type="submit" name="Enviar" value = "Enviar" class="btn btn-primary">Gravar</button>
-			<button type="submit" name="Cancelar" value = "Cancelar" class="btn btn-danger">Cancelar</button>
+			<button type="reset" name="Cancelar" value = "Cancelar" class="btn btn-danger">Cancelar</button>
 			</div>
 
 
