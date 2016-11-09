@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro de Usuario</title>
+    <link href=" bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    
+    <div class="container">
+	<div class="jumbotron" align="center">
+    	<img  width="400px" height="100px" src="imagens/siistema.png"/>
+	</div>
+	<input type="image" align="right" width="80px" height="40px" src="imagens/logout.png" alt="submit">
+	</input>
+	<div class="menu-container">	
+	<ul class="menu clearfix" >
+	<li><a href="#">Home</a></li>
+	<li><a href="cadastroUsuario.html">Novo Usuário</a></li>
+	<li><a href="listagemUsuario.php">Alterações do Usuário</a></li>
+	</ul>
+	</div>
+
+    	<form action="cadastroUsuario.php" method="post" name="Formulario" id="Formulario">
+			</br>
+			<h2>Dados do Usuário</h2>
+			<hr>
+   
+			<div class="form-group col-md-6">
+				<label for="login">Login</label>
+				<input class="form-control" name="login" id="login"  type="text" size="20"  /> 
+			</div>
+			<div class="form-group col-md-6">
+				<label for="senha">Senha</label>
+				<input class="form-control"  name="senha" id="senha"  type="password" size="20" />
+  			</div>
+			<div class="form-group col-md-12">
+				<label for="nome">Nome</label>
+				<input class="form-control"  name="nome" id="nome"  type="text" size="20" />
+  			</div>
+            
+			<div class="form-group col-md-6">
+				<label for="categoria">Categoria</label>
+                    <select class="form-control" name="categoria" id="categoria">
+			<option>Selecione categoria</option>
+                        <option value="C">Coordenador</option>
+                        <option value="G" >Gerente do PI</option>
+			<option value="P">Professor</option>
+                    </select/>
+			</div>
+			
+			<div class="form-group col-md-6">
+				<label for="situacao">Situação</label>
+                    <select class="form-control" name="situacao" id="situacao">
+			<option>Selecione a situação do usuário</option>
+                        <option value="A">Ativo</option>
+                        <option value="I" >Inativo</option>
+                    </select/>
+			</div>
+	
+	
+			
+			<div align=center>
+			<button type="submit" name="Enviar" value = "Enviar" class="btn btn-primary">Gravar</button>
+			<button type="reset" name="Cancelar" value = "Cancelar" class="btn btn-danger">Cancelar</button>
+			</div>
+
+		</form>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  
+  </body>
+</html>
