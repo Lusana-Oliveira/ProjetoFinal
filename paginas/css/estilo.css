@@ -3,11 +3,11 @@ body{
 }
 
 
-.jumbotron h2{
-	color: #CC0000;
+.jumbotron{
+	background: #DCDCDC;
 	font-size: 36px;
 	text-align: center;
-	text-shadow: 0px 4px #C0D9D9;
+	text-shadow: 0px 4px #DCDCDC;
 }
 
 .clearfix:after{
@@ -21,10 +21,16 @@ body{
 	overflow: hidden;
 
 }
-.menu{
+.menu, 
+.sub-menu{
 
 	list-style:none;
 	background: #000;
+}
+
+.sub-menu{
+
+	background: #444;
 }
 
 .menu a{
@@ -50,15 +56,25 @@ body{
 
 	background:#444;
 }
-#caixa_login{
-	background:#FFF;
-	width:350px;
-	height:250px;
-	margin:0px auto;
-	border:2px solid #CCC;
+
+.menu > li:hover > .sub-menu {
 	
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:5px;
+	display: block;
+	background:#444;
 }
+
+.sub-menu{
+	position:absolute;
+	display: none;
+	padding: 10px;
+	font-size:14px
+	font-weight: 700;
+
+}
+
+
+
+
+
+
 
