@@ -1,0 +1,80 @@
+//Criação do banco de dados – nome: projetointegrador
+
+create database projetointegrador;
+
+//Criação das tabelas
+
+create table curso (
+numero int, 
+nome varchar (150) not null, 
+sigla char (3) not null, 
+CONSTRAINT pkCurso PRIMARY KEY (numero)
+);
+
+create table disciplina (
+codigo int, 
+nome varchar (80) not null, 
+ch int not null, 
+CONSTRAINT pkDisciplina PRIMARY KEY (codigo)
+);
+
+create table aluno (
+matricula char (15), 
+nome varchar (80) not null, 
+sexo char (1) not null, 
+dtnasc date not null, 
+cidade varchar (40) not null, 
+uf char (2) not null, 
+CONSTRAINT pkAluno PRIMARY KEY (matricula)
+);
+
+create table usuario (
+login varchar (20), 
+senha varchar (50)not null, 
+nome varchar (80)not null, 
+categoria char (1) not null, 
+situacao char (1) not null, 
+CONSTRAINT pkUsuario PRIMARY KEY (login)
+);
+
+create table projeto (
+numero serial, 
+ano int not null, 
+semestre int not null, 
+modulo char(3) not null, 
+dt_inicio date not null, 
+dt_termino date not null, 
+tema varchar (100) not null, 
+descricao varchar (8000) not null, 
+num_curso int not null, 
+CONSTRAINT pkProjeto PRIMARY KEY (numero),
+CONSTRAINT fkCurso FOREIGN KEY (num_curso) REFERENCES curso (numero)
+ );
+
+
+create table composto (
+num_proj int, 
+cod_disc int, 
+desc_atividade varchar (2000) not null, 
+CONSTRAINT pkComposto PRIMARY KEY (num_proj, cod_disc), 
+CONSTRAINT fkComposto1 FOREIGN KEY (num_proj) REFERENCES projeto (numero), 
+CONSTRAINT fkComposto2 FOREIGN KEY (cod_disc) REFERENCES disciplina (codigo)
+);
+
+create table grupo (
+id int, 
+nome varchar (60) not null, 
+num_proj int not null, 
+CONSTRAINT pkGrupo PRIMARY KEY (id), 
+CONSTRAINT fkGrupo FOREIGN KEY (num_proj) REFERENCES projeto (numero)
+);
+
+create table participa (
+matricula char (15) not null, 
+id_grupo int not null, 
+nota numeric (3,1), 
+CONSTRAINT pkParticipa PRIMARY KEY (matricula, id_grupo), CONSTRAINT fkParticipa1 FOREIGN KEY (matricula) REFERENCES aluno (matricula), 
+CONSTRAINT fkParticipa2 FOREIGN KEY (id_grupo) REFERENCES grupo (id)
+);
+
+
