@@ -1,5 +1,20 @@
 <?php
 
+	session_start();
+
+    if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true)) 
+    {
+        unset($_SESSION['login']);
+        unset($_SESSION['senha']);
+        session_destroy();
+        header('location:index.html');
+    }
+    if($_SESSION['categoria'] != 'C'){
+        
+die("<center><h1>Você não tem permissão!</h1></center>");
+    
+   }
+		
 	$numero = filter_input(INPUT_GET, "numero");
 	$nome = filter_input(INPUT_GET, "nome");
 	$sigla = filter_input(INPUT_GET, "sigla");
@@ -20,3 +35,5 @@ if($con){
 	die("Erro: " . pg_error($con));
 }
 ?>
+
+

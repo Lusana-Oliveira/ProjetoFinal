@@ -25,23 +25,24 @@
 	<div class="jumbotron" align="center">
     	<img  width="400px" height="100px" src="imagens/siistema.png"/>
 	</div>
-	<input type="image" align="right" width="80px" height="40px" src="imagens/logout.png" alt="submit">
-	</input>
+	
 	<div class="menu-container">	
 	<ul class="menu clearfix" >
-	<li><a href="#">Home</a></li>
+	<li><a href="principal.php">Home</a></li>
 	<li><a href="cadastroAluno.html">Novo Aluno</a></li>
 	<li><a href="listagemAluno.php">Alterações do Aluno</a></li>
+	<div align="right">
+	<a href="logout.php">LOGOUT</a>
+	</div>
 	</ul>
 	</div>
 	</br>
 	
 	<div id="conteudo">
 
-	<h2 align="center">Alterações do Aluno</h2><hr>
+	<h2>Alterações do Aluno</h2><hr>
 		<p>
 		<form action="alterarAluno.php">
-		<div align="center">
 		<input type="hidden" name="matricula" value="<?php echo $matricula ?>"/>
 		Nome: <input type="text" name="nome" value="<?php echo $nome ?>"/></br></br>
 		Sexo: <input type="text" name="sexo" value="<?php echo $sexo ?>"/></br></br>
@@ -50,7 +51,6 @@
 		Uf: <input type="text" name="uf" value="<?php echo $uf ?>"/></br></br>	
 		<input type="submit" value="Alterar"/>
 		<input type="submit" href="listagemAluno.php" value="Voltar"/>	
-		</div>
 		</form>
 		</p>
 	</div>

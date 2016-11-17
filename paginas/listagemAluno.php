@@ -32,13 +32,15 @@
 	<div class="jumbotron" align="center">
     	<img  width="400px" height="100px" src="imagens/siistema.png"/>
 	</div>
-	<input type="image" align="right" width="80px" height="40px" src="imagens/logout.png" alt="submit">
-	</input>
 	<div class="menu-container">	
 	<ul class="menu clearfix" >
-	<li><a href="#">Home</a></li>
+	<li><a href="principal.php">Home</a></li>
 	<li><a href="cadastroAluno.html">Novo Aluno</a></li>
-	<li><a href="listagemAluno.php">Alterações do Aluno</a></li>
+	<li><a href="#">Lançar Notas</a></li>
+	<li><a href="#">Relatórios</a></li>
+	<div align="right">
+	<a href="logout.php">LOGOUT</a>
+	</div>
 	</ul>
 	</div>
 	</br>
