@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alterar Disciplina</title>
-    <link href=" bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="estilo.css" rel="stylesheet">
-	<?php
+	<head>
+    		<meta charset="utf-8">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<title>Alterar Disciplina</title>
+    		<link href=" bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    		<link href="estilo.css" rel="stylesheet">
+	
+		<?php
 
-	$codigo = filter_input(INPUT_GET, "codigo");
-	$nome = filter_input(INPUT_GET, "nome");
-	$ch = filter_input(INPUT_GET, "ch");
+		//Declaração das variáveis
 
-	?>
-  </head>
+		$codigo = filter_input(INPUT_GET, "codigo");
+		$nome = filter_input(INPUT_GET, "nome");
+		$ch = filter_input(INPUT_GET, "ch");
+
+		?>
+  	</head>
   
   <body>
+
+	<!-- Top -->
     
     <div class="container">
 	<div class="jumbotron" align="center">
-    	<img  width="400px" height="100px" src="imagens/siistema.png"/>
+    		<img  width="400px" height="100px" src="imagens/siistema.png"/>
 	</div>
 	
 	<div class="menu-container">	
-	<ul class="menu clearfix" >
-	<li><a href="principal.php">Home</a></li>
-	<li><a href="cadastroDisciplina.html">Nova Disciplina</a></li>
-	<li><a href="listagemDisciplina.php">Alterações da Disciplina</a></li>
-	<div align="right">
-	<a href="logout.php">LOGOUT</a>
-	</div>
-	</ul>
+		<ul class="menu clearfix" >
+			<li><a href="principal.php">Home</a></li>
+			<li><a href="cadastroDisciplina.html">Nova Disciplina</a></li>
+			<li><a href="listagemDisciplina.php">Alterações da Disciplina</a></li>
+		<div align="right">
+			<a href="logout.php">LOGOUT</a>
+		</div>
+		</ul>
 	</div>
 	</br>
 	
 	<div id="conteudo">
+
+	<!-- Dados a serem alterados -->
 
 	<h2>Alterações da Disciplina</h2>
 		<p>

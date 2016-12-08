@@ -9,6 +9,8 @@
     <link href="estilo.css" rel="stylesheet">
 	<?php
 
+	 //Declaração das variáveis
+
 	$matricula = filter_input(INPUT_GET, "matricula");
 	$nome = filter_input(INPUT_GET, "nome");
 	$sexo = filter_input(INPUT_GET, "sexo");
@@ -21,6 +23,8 @@
   
   <body>
     
+    <!-- Top -->
+
     <div class="container">
 	<div class="jumbotron" align="center">
     	<img  width="400px" height="100px" src="imagens/siistema.png"/>
@@ -39,6 +43,8 @@
 	</br>
 	
 	<div id="conteudo">
+
+	<!-- Dados a serem alterados -->
 
 	<h2>Alterações do Aluno</h2><hr>
 		<p>

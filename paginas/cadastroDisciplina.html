@@ -1,53 +1,57 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro de 	Disciplina</title>
-    <link href=" bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="estilo.css" rel="stylesheet">
-  </head>
+	<head>
+    		<meta charset="utf-8">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<title>Cadastro de Disciplina</title>
+    		<link href=" bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    		<link href="estilo.css" rel="stylesheet">
+		
+  	</head>
   
   <body>
     
     <div class="container">
 	<div class="jumbotron" align="center">
-    	<img  width="400px" height="100px" src="imagens/siistema.png"/>
+    		<img  width="400px" height="100px" src="imagens/siistema.png"/>
 	</div>
+
 	<div class="menu-container">	
-	<ul class="menu clearfix" >
-	<li><a href="principal.php">Home</a></li>
-	<li><a href="listagemDisciplina.php">Alterações da Disciplina</a></li>
-	<div align="right">
-	<a href="logout.php">LOGOUT</a>
+		<ul class="menu clearfix" >
+			<li><a href="principal.php">Home</a></li>
+			<li><a href="listagemDisciplina.php">Alterações da Disciplina</a></li>
+		<div align="right">
+			<a href="logout.php">LOGOUT</a>
+		</div>
+		</ul>
 	</div>
-	</ul>
-	</div>
+
     	<form action="cadastroDisciplina.php" method="post" name="Formulario" id="Formulario">
-			</br>
-			<h2>Dados da Disciplina</h2>
-			<hr>
+			
+		</br>
+		<h2>Dados da Disciplina</h2>
+		<hr>
    
-			<div class="form-group col-md-3">
-				<label for="codigo">Codigo</label>
-				<input class="form-control" name="codigo" id="codigo"  type="text" size="20" /> 
-			</div>
+		<div class="form-group col-md-3">
+			<label for="codigo">Codigo</label>
+				<input class="form-control" name="codigo" id="codigo"  type="text" size="20" required="required" pattern="[0-9]+$" title="Apenas números" maxlength="15"/> 
+		</div>
 
-			<div class="form-group col-md-6">
-				<label for="nome">Nome</label>
-				<input class="form-control"  name="nome" id="nome"  type="text" size="20" />
-  			</div>
+		<div class="form-group col-md-6">
+			<label for="nome">Nome</label>
+				<input class="form-control"  name="nome" id="nome"  type="text" size="20" required x-moz-errormessage="Preencha o campo NOME"/>
+  		</div>
             
-			<div class="form-group col-md-3">
-				<label for="carga">Carga Horária</label>
-				<input class="form-control"  name="carga" id="carga"  type="text" size="20"/>
-  			</div>
+		<div class="form-group col-md-3">
+			<label for="carga">Carga Horária</label>
+				<input class="form-control"  name="carga" id="carga"  type="text" size="20"required="required" pattern="[0-9]+$" title="Apenas números" maxlength="3"/>
+  		</div>
 
-			<div align=center>
+		<div align=center>
 			<button type="submit" name="Enviar" value = "Enviar" class="btn btn-primary">Gravar</button>
 			<button type="reset" name="Cancelar" value = "Cancelar" class="btn btn-danger">Cancelar</button>
-			</div>
+		</div>
 
 
 		</form>

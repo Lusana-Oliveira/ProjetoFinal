@@ -1,37 +1,77 @@
 <?php
 
+	//Início da sessão
+
 	session_start();
 
-    if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true)) 
-    {
-        unset($_SESSION['login']);
-        unset($_SESSION['senha']);
-        session_destroy();
-        header('location:index.html');
-    }
-    if($_SESSION['categoria'] != 'C'){
+	//Verifica se a variável existe
+
+    	if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true)) 
+    	{
         
-die("<center><h1>Você não tem permissão!</h1></center>");
+		unset($_SESSION['login']);
+        	unset($_SESSION['senha']);
+
+		//Resetar/Destruir a sessão
+
+        	session_destroy();
+        	header('location:index.html');
+    	}
+
+	//Verifica se a sessão é diferente de C (Coordenador) se for diferente será emitido uma mensagem de permissão 	negada
+
+    	if($_SESSION['categoria'] != 'C'){
+        
+					echo "
+
+                    			<script type='text/javascript'>                                          
+
+                       			 window.alert('Voce não tem permissão!');
+                        		 window.location.href = 'listagemDisciplina.php'; 
+
+                                                                             
+                    			</script>
+
+
+              				 ";
+
     
-   }
+  	 }
+
+	//Declaração das variáveis 
 
 	$codigo = filter_input(INPUT_GET, "codigo");
 	$nome = filter_input(INPUT_GET, "nome");
 	$ch = filter_input(INPUT_GET, "ch");
 
+	//Conexão com o Banco de Dados
+
 	$str_conexao = "host=127.0.0.1 dbname=projetointegrador port=5432 user=postgres
-password=postgres";
+	password=postgres";
 
-$con = pg_connect ($str_conexao);
+	$con = pg_connect ($str_conexao);
 
-if($con){
-	$query = pg_query ($con, "update disciplina set nome = '$nome', ch ='$ch' where codigo = '$codigo';");
+	//pg_query — Executa uma consulta (query)
+
+	if($con){
+
+		$query = pg_query ($con, "update disciplina set nome = '$nome', ch ='$ch' where codigo = '$codigo';");
+
+	//Se query for execultado corretamente será redirecionado para a página contida em header
+
 	if (query){
-	header("Location: listagemDisciplina.php");
+
+		header("Location: listagemDisciplina.php");
+
+	//Se ocorrer um erro será mostrada uma mensagem e termina o script atual
+
 	}else{
+
 	  die("Erro: " . pg_error($con));
 	}
-}else {
-	die("Erro: " . pg_error($con));
-}
+
+	}else {
+
+		die("Erro: " . pg_error($con));
+	}
 ?>
