@@ -9,6 +9,48 @@
     <link href="estilo.css" rel="stylesheet">
 	<?php
 
+	//Início da sessão
+
+    session_start();
+
+    //Verifica se a variável existe
+
+    if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true)) 
+    {
+        unset($_SESSION['login']);
+        unset($_SESSION['senha']);
+
+	//Resetar/Destruir a sessão	
+	
+        session_destroy();
+        header('location:index.html');
+    }
+
+    //Verifica se a sessão é diferente de G (Gerente do Projeto) se for diferente será emitido uma mensagem de permissão 	negada
+
+    if($_SESSION['categoria'] != 'G'){
+        
+	echo "
+
+                    			<script type='text/javascript'>                                          
+
+                       			 window.alert('Voce não tem permissão!');
+                        		 window.location.href = 'listagemAluno.php'; 
+
+                                                                             
+                    			</script>
+
+
+              				 ";
+
+    
+   }
+
+	$str_conexao = "host=127.0.0.1 dbname=projetointegrador port=5432 user=postgres
+	password=postgres";
+
+   	$con = pg_connect ($str_conexao);
+
 	 //Declaração das variáveis
 
 	$matricula = filter_input(INPUT_GET, "matricula");

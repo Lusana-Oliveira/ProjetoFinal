@@ -49,7 +49,6 @@
 		<ul class="menu clearfix" >
 			<li><a href="principal.php">Home</a></li>
 			<li><a href="cadastroDisciplina.html">Nova Disciplina</a></li>
-			<li><a href="listagemDisciplina.php">Alterações da Disciplina</a></li>
 		<div align="right">
 			<a href="logout.php">LOGOUT</a>
 		</div>

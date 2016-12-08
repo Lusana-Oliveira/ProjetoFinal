@@ -74,8 +74,10 @@
 				<li><a href="#">Menu de Relatórios</a>
 					<ul class="sub-menu">
 					   <li><a href="relatorioAluno.php">Relação Alunos e Nota</a></li>
+					   <li><a href="relatorio2.php">Relação Projeto - Ano/Semeste</a></li>
 					</ul>
 				</li>
+				
 				<li><a href="listaLink.php">Acesso ao P.I</a></li>
 				<div align="right">
 					<a href="logout.php">LOGOUT</a>

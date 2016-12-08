@@ -50,7 +50,6 @@
 		<ul class="menu clearfix" >
 			<li><a href="principal.php">Home</a></li>
 			<li><a href="cadastroCurso.html">Novo Curso</a></li>
-			<li><a href="listagemCurso.php">Alterações do Curso</a></li>
 		<div align="right">
 			<a href="logout.php">LOGOUT</a>
 		</div>

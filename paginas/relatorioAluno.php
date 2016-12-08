@@ -79,6 +79,7 @@
 		<div class="menu-container">	
 			<ul class="menu clearfix" >
 				<li><a href="principal.php">Home</a></li>
+					
 				<div align="right">
 					<a href="logout.php">LOGOUT</a>
 				</div>
@@ -94,17 +95,17 @@
                                 <div class="tab-content">
                                   
                                     <br>
-                                        <div class="form-group col-lg-2" id="an">
+                                        <div class="form-group col-md-4 id="an">
                                             <label>Ano</label>
                                             	<input type="text" class="form-control" required="" maxlength="4" pattern="[0-9]+$" title="Apenas números" name="txtAno">     
                                         </div>
 
-                                        <div class="form-group col-lg-2" id="semestre">
+                                        <div class="form-group col-md-4" id="semestre">
                                             <label>Semestre</label>
                                             	<input type="number" class="form-control" required name="txtSem" min="1" max="2">
                                         </div>
                                       
-                                        <div class="form-group col-lg-3" id="fCurso">
+                                        <div class="form-group col-md-4" id="fCurso">
                                             <label>Curso</label>
                                             	<select class="form-control" id="txtNum" required name="txtNum" 							onchange="fillCurso(this)">
 
